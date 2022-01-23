@@ -124,3 +124,47 @@ header
     font-size: 0.7em;
 
 }
+
+/* Display de la Section de présentation (Filtres) */
+
+#filtres
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1.2em;
+    padding-top: 1em;
+    font-family: 'roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.filtre
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+}
+
+.filtre li
+{
+    border-top: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    margin-left: 30px;
+    padding-right: 1em;
+    border-radius: 1.3em;
+}
+
+.filtre i
+{
+    margin-right: 1em;
+    border: 5px solid #deebff;
+    background-color: #deebff;
+    color: #0065fc;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 1.3em;
+}
