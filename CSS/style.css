@@ -113,8 +113,8 @@ header
     border: 1px solid #0065fc;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-top-right-radius: 0.7em;
     border-bottom-right-radius: 0.7em;
     background-color: #0065fc;
@@ -166,5 +166,26 @@ header
     color: #0065fc;
     font-size: 1em;
     padding: 10px;
+    border-radius: 1.3em;
+}
+
+/* Display de la Section de présentation (Info) */
+
+#info
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1em;
+    font-family: 'roboto', sans-serif;
+}
+
+#info i
+{
+    border: 2px solid lightgray;
+    margin: 1em;
+    padding: 0.9em;
+    font-size: 0.8em;
+    color: #0065fc;
     border-radius: 1.3em;
 }
