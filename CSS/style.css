@@ -1,6 +1,7 @@
     /* Header de la page */
 
 header {
+    margin-left: 50px;
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -86,4 +87,10 @@ main {
 /* Section de recherche et de filtrage */
 
 #search {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+#search h1 {
+
 }
