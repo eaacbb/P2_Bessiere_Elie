@@ -1,0 +1,89 @@
+    /* Header de la page */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+
+/* Logo de la page */
+
+header .logo {
+    width: 15%;
+    text-align: center;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+/* Menu de la page */
+
+header nav {
+    width: 85%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav a {
+    width: 150px;
+    font-family: 'roboto', sans-serif;
+    font-size: 500;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 25px 20px 0 20px;
+}
+
+header nav a:hover {
+    border-top: 2px solid #0065fc;
+    color: #0065fc;
+}
+
+/* Responsive du header de la page */
+
+@media screen and (max-width:880px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        position: unset;
+    }
+
+    /* Responsive logo de la page */
+
+    header .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Responsive menu de la page */
+
+    header nav {
+        width: 100%;
+        display: flex;
+    }
+
+    header nav a {
+        width: 50%;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #d9d9d9;
+    }
+
+    header nav a:hover {
+        border-top: 0;
+        border-bottom: 2px solid #0065fc;
+    }
+}
+
+    /* Contenu principal de la page (main) */
+
+main {
+    font-family: 'roboto', sans-serif;
+}
+
+/* Section de recherche et de filtrage */
+
+#search {
+}
