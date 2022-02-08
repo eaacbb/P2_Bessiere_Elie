@@ -1,26 +1,39 @@
-    /* Header de la page */
+        /* Boxsizing - borderbox */
+
+* {
+    box-sizing: border-box;
+    line-height: 1.15;
+}
+
+body {
+    margin: 0 5%;
+}
+
+    /* Header de la page - #HEADER */
 
 header {
-    margin-left: 50px;
+    padding: 0 80px;
     display: flex;
     justify-content: space-between;
     background-color: white;
     position: sticky;
     top: 0;
+    z-index: 1; /* Rendre le sticky au dessus des relative */
 }
 
-/* Logo de la page */
+/* Logo de la page - .LOGO */
 
 header .logo {
     width: 15%;
     text-align: left;
+    padding: 25px;
 }
 
 header .logo img {
-    max-width: 150px;
+    max-width: 100px;
 }
 
-/* Menu de la page */
+/* Menu de la page - NAV */
 
 header nav {
     width: 85%;
@@ -30,12 +43,13 @@ header nav {
 
 header nav a {
     width: 150px;
-    font-family: 'roboto', sans-serif;
-    font-size: 500;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
     color: black;
     text-align: center;
     text-decoration: none;
-    padding: 25px 20px 0 20px;
+    padding: 35px 20px 0 20px;
+    border-top: 2px solid transparent;
 }
 
 header nav a:hover {
@@ -43,54 +57,433 @@ header nav a:hover {
     color: #0065fc;
 }
 
-/* Responsive du header de la page */
-
-@media screen and (max-width:880px) {
-    header {
-        display: flex;
-        flex-direction: column;
-        position: unset;
-    }
-
-    /* Responsive logo de la page */
-
-    header .logo {
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Responsive menu de la page */
-
-    header nav {
-        width: 100%;
-        display: flex;
-    }
-
-    header nav a {
-        width: 50%;
-        padding-bottom: 20px;
-        border-bottom: 2px solid #d9d9d9;
-    }
-
-    header nav a:hover {
-        border-top: 0;
-        border-bottom: 2px solid #0065fc;
-    }
-}
-
-    /* Contenu principal de la page (main) */
+    /* Contenu principal de la page - MAIN */
 
 main {
-    font-family: 'roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    margin: 0 20px;
 }
 
-/* Section de recherche et de filtrage */
+    /* Section de recherche et de filtrage - #SEARCH */
 
 #search {
-    margin-top: 50px;
-    margin-left: 50px;
+    padding: 0 50px;
 }
 
 #search h1 {
+    display: block;
+    font-size: 1.6em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 700;
+    cursor: default;
+}
 
+#search p {
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* Moteur de recherche - .ENGINE*/
+
+.engine {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+.engine .fa-map-marker-alt {
+    border: 2px solid #f2f2f2;
+    padding: 15px 15px;
+    background-color: #f2f2f2;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.engine .search_field {
+    border: 2px solid #f2f2f2;
+    padding-left: 15px;
+    color: black;
+    font-weight: 700;
+    font-size: 1.2em;
+    font-family: 'Raleway', sans-serif;
+    width: 225px;
+}
+
+.engine .search_field:focus {
+    background-color: #e2edfd;
+    width: 350px;
+    transition: width 0.5s ease-in-out;
+}
+
+.engine .search_field::placeholder {
+    color: black;
+    font-weight: 700;
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+}
+
+:focus::placeholder {
+    opacity: 25%;
+}
+
+.engine button {
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid transparent;
+    background-color: #0065fc;
+    border-radius: 0 15px 15px 0;
+    color: white;
+    font-size: 1.15em;
+    font-weight: 500;
+}
+
+.engine button:hover {
+    background-color: #f2f2f2;
+    color: #0065fc;
+    border: 2px solid #f2f2f2;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.engine .fa-search {
+    display: none;
+}
+
+/* Filtres de recherche - .FILTERS - .FILTER */
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.filters h2 {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-right: 20px;
+    padding: 15px;
+    cursor: default;
+}
+
+.filters .filter {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 2px solid #d9d9d9;
+}
+
+.filters .filter i { /* Comment faire passer le background de <i> au premier plan par dessus le border de .filter ?? */
+    display: flex;
+    position: absolute;
+    left: -10px; /* ENFIIIIN */
+    justify-content: center;
+    background-color: #deebff;
+    color: #0065fc;
+    padding: 16px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.filters .filter span {
+    text-align: center;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 20px;
+    color: black;
+    font-weight: 600;
+}
+
+.filters .filter:hover > span {
+    color: white;
+}
+
+.filters .filter:hover {
+    cursor: pointer;
+    background-color: #0065fc;
+    border: 2px solid transparent;
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+    transition: all 0.75s cubic-bezier(.25,.8,.25,1);
+}
+
+/* Infonote sur le nombre de résutltats - .INFO */
+
+.info {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.info i {
+    display: flex;
+    height: 25px;
+    width: 25px;
+    font-size: 0.75em;
+    color: #0065fc;
+    border: 1px solid #d9d9d9;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.info p {
+    display: flex;
+    font-size: 0.8em;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+    /* Section d'affichage des résultats - #RESULTS */
+
+#results {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#results a {
+    text-decoration: none;
+}
+
+.blue_star {
+    color: #0065fc;
+}
+
+.grey_star {
+    color: #d9d9d9;
+}
+
+/* Hébergements trouvés - LODGING */
+
+.lodging {
+    width: 65%;
+    background-color: #f2f2f2;
+    margin-right: 40px;
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: 30px;
+}
+
+.lodging h2 {
+    margin-top: 10px;
+    font-weight: 600;
+    cursor: default;
+}
+
+.lodging_cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.lodging_card {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: stretch;
+    background-color: white;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.10), 0px 5px 5px 0px rgba(0, 0, 0, 0.05) ;
+}
+
+.lodging_card img {
+    object-fit: cover;
+    margin: 10px 10px 0 10px;
+    border-radius: 20px 20px 0 0;
+    max-height: 140px;
+}
+
+.lodging_card h3, p {
+    margin: 0;
+    padding: 5px 0 5px 20px;
+    color: black;
+}
+
+.lodging_card i:first-of-type {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.lodging:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+    transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+}
+
+.lodging_card:hover {
+    box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: all 0.75s cubic-bezier(.25,.8,.25,1);
+}
+
+.lodging_card:hover > h3, .lodging_card:hover > p {
+    color: #0065fc;
+}
+
+.more {
+    color: black;
+    font-size: 1.2em;
+    font-weight: 600;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.more:hover {
+    color: #0065fc;
+}
+
+/* Hébergements populaires */ 
+
+.popular {
+    width: 35%;
+    background-color: #f2f2f2;
+    margin-right: 40px;
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: 30px;
+}
+
+/* Popular head */
+
+.popular_head {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.popular_head h2 {
+    margin-top: 10px;
+    font-weight: 600;
+    cursor: default;
+}
+
+.popular_head a {
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popular_head a i {
+    color: black;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+}
+
+.popular_head a:hover > i {
+    color: #0065fc;
+}
+
+/* Popular cards */
+
+.popular_cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.popular_card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.10), 0px 5px 5px 0px rgba(0, 0, 0, 0.05) ;
+}
+
+.popular_card img {
+    object-fit: cover;
+    width: 140px;
+    height: 150px;
+    border-radius: 20px 0 0 20px;
+    margin: 10px 0 10px 10px;
+}
+
+.pop_card_text {
+    display: flex;
+    padding-top: 0px;
+    padding-left: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.pop_card_text h3 {
+    color: black;
+    margin: 0;
+    margin-top: 20px;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.pop_card_text p {
+    color: black;
+    margin: 0;
+    padding-left: 0;
+    padding-top: 10px;
+}
+
+.pop_card_text .star {
+    width: 200px;
+    padding: 0;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.popular:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+    transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+}
+
+.popular_card:hover {
+    box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: all 0.75s cubic-bezier(.25,.8,.25,1);
+}
+
+.popular_card:hover > .pop_card_text h3, .popular_card:hover > .pop_card_text p { /* Comment faire pour que la couleur change dès qu'on arrive sur la carte ?? */
+    color: #0065fc;
 }

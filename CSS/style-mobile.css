@@ -1,0 +1,33 @@
+@media screen and (max-width:880px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        position: unset;
+    }
+
+    /* Responsive logo de la page */
+
+    header .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Responsive menu de la page */
+
+    header nav {
+        width: 100%;
+        display: flex;
+    }
+    
+    header nav a {
+        width: 50%;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #d9d9d9;
+        font-weight: 500;
+    }
+
+    header nav a:hover {
+        border-top: 0;
+        border-bottom: 2px solid #0065fc;
+    }
+}
