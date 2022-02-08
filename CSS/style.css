@@ -225,6 +225,11 @@ main {
     transition: all 0.75s cubic-bezier(.25,.8,.25,1);
 }
 
+.filters .filter:hover {
+    transform: scale(1.02);
+    transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
+}
+
 /* Infonote sur le nombre de résutltats - .INFO */
 
 .info {
@@ -347,6 +352,11 @@ main {
 .lodging_card:hover {
     box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     transition: all 0.75s cubic-bezier(.25,.8,.25,1);
+}
+
+.lodging_card:hover {
+    transform: scale(1.02);
+    transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
 }
 
 .lodging_card:hover > h3, .lodging_card:hover > p {
@@ -484,6 +494,11 @@ main {
 .popular_card:hover {
     box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     transition: all 0.75s cubic-bezier(.25,.8,.25,1);
+}
+
+.popular_card:hover {
+    transform: scale(1.02);
+    transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
 }
 
 .popular_card:hover > .pop_card_text h3, .popular_card:hover > .pop_card_text p { /* Comment faire pour que la couleur change dès qu'on arrive sur la carte ?? */
@@ -627,6 +642,11 @@ main {
 .activities_card1:hover, .activities_card2:hover, .activities_card3:hover, .activities_card4:hover, .activities_card5:hover, .activities_card6:hover {
     box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     transition: all 0.75s cubic-bezier(.25,.8,.25,1);
+}
+
+.activities_card1:hover, .activities_card2:hover, .activities_card3:hover, .activities_card4:hover, .activities_card5:hover, .activities_card6:hover {
+    transform: scale(1.02);
+    transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
 }
 
 /* Footer de la page */
