@@ -6,7 +6,7 @@
 }
 
 body {
-    margin: 0 5%;
+    margin: 0 10%;
 }
 
     /* Header de la page - #HEADER */
@@ -298,6 +298,7 @@ main {
 }
 
 .lodging h2 {
+    font-size: 1.3em;
     margin-top: 10px;
     font-weight: 600;
     cursor: default;
@@ -336,6 +337,20 @@ main {
     margin: 0;
     padding: 5px 0 5px 20px;
     color: black;
+}
+
+.lodging h3 {
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.lodging p {
+    font-size: 0.9em;
+    padding-top: 0;
+}
+
+.lodging_card i {
+    font-size: 0.8em;
 }
 
 .lodging_card i:first-of-type {
@@ -465,6 +480,8 @@ main {
 
 .pop_card_text h3 {
     color: black;
+    font-size: 1em;
+    font-weight: 700
     margin: 0;
     margin-top: 20px;
     padding-left: 0;
@@ -473,12 +490,14 @@ main {
 
 .pop_card_text p {
     color: black;
+    font-size: 0.9em;
     margin: 0;
     padding-left: 0;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .pop_card_text .star {
+    font-size: 0.9em;
     width: 200px;
     padding: 0;
     padding-bottom: 20px;
@@ -636,6 +655,8 @@ main {
 
 .activities_cards a h3 {
     margin-left: 20px;
+    font-size: 1em;
+    font-weight: 700;
 }
 
 .activities_card1:hover, .activities_card2:hover, .activities_card3:hover, .activities_card4:hover, .activities_card5:hover, .activities_card6:hover {
