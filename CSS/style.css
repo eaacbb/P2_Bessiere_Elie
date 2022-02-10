@@ -481,7 +481,7 @@ main {
 .pop_card_text h3 {
     color: black;
     font-size: 1em;
-    font-weight: 700
+    font-weight: 700;
     margin: 0;
     margin-top: 20px;
     padding-left: 0;
@@ -533,7 +533,7 @@ main {
 
 #activities .activities_title {
     color: black;
-    font-size: 1.5;
+    font-size: 1.3em;
     font-weight: 700;
     cursor: default;
 }
