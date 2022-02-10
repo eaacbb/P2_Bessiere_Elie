@@ -1,8 +1,17 @@
-@media screen and (max-width:880px) {
+@media screen and (max-width:768px) {
+
+            /* Boxsizing - borderbox */
+
+* {
+    box-sizing: border-box;
+    line-height: 1.15;
+}
+
     header {
         display: flex;
         flex-direction: column;
         position: unset;
+        padding: 0;
     }
 
     /* Responsive logo de la page */

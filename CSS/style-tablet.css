@@ -1,0 +1,49 @@
+@media screen and (max-width:992px) {
+
+            /* Boxsizing - borderbox */
+
+    * {
+    box-sizing: border-box;
+    line-height: 1.15;
+    }
+
+    body {
+        margin: 0%;
+    }
+
+       /* Header de la page - #HEADER */
+
+    header{
+        display: flex;
+        flex-direction: column;
+        position: unset;
+        padding: 0;
+    }
+
+        /* Logo de la page */
+
+    header .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+        /* Menu de la page */
+
+    header nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    header nav a {
+        width: 50%;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #d9d9d9;
+        font-weight: 500;
+    }
+
+    header nav a:hover {
+        border-top: 0;
+        border-bottom: 2px solid #0065fc;
+    }
+}
