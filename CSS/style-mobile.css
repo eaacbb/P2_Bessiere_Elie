@@ -2,41 +2,124 @@
 
             /* Boxsizing - borderbox */
 
-* {
+    * {
     box-sizing: border-box;
     line-height: 1.15;
-}
+    }
 
-    header {
-        display: flex;
-        flex-direction: column;
-        position: unset;
+    body {
+        max-width: 768px;
+        margin: auto;
+    }
+
+    /* Header */
+
+    header .logo img {
+        max-width: 125px;
+    }
+
+    /* Search */
+
+    #search h1, #search p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    #search p {
+        margin: 0;
+        padding: 15px 0 0 0;
+    }
+
+    .engine .search_field:focus {
+        background-color: #e2edfd;
+        width: auto;
+        transition: width 0s ease-in-out;
+    }
+
+    .engine .fa-search {
+        display: inline;
+    }
+
+    .engine button span {
+        display: none;
+    }
+
+    .engine button {
+        border-radius: 15px;
+        margin-left: -15px;
+    }
+
+    .filter_title {
+        width: 100%;
+    }
+
+    .filters h2 {
+        margin: 0;
+    }
+
+    .filters .filter {
         padding: 0;
+        margin: 10px;
     }
 
-    /* Responsive logo de la page */
+    /* Results */
 
-    header .logo {
-        width: 100%;
-        text-align: center;
+    .popular_card img {
+        min-width: 45%;
     }
 
-    /* Responsive menu de la page */
+    .pop_card_text {
+        padding-left: 20px;
+    }
 
-    header nav {
+    .pop_card_text1 {
+        font-size: 1.1em;
+        padding-right: 20px;
+    }
+
+    .lodging_cards {
+        flex-direction: column;
+    }
+
+    .lodging_card {
         width: 100%;
-        display: flex;
+    }
+
+    /* Activités */
+
+    .activities_cards {
+        flex-direction: column;
+    }
+
+    .activities_cards img {
+        max-height: 75%;
+        min-width: 100%;
+    }
+
+    .activities_card1, .activities_card4, .activities_card23, .activities_card56 {
+        width: 100%;
+    }
+
+    .activities_card1, .activities_card4, .activities_card2, .activities_card3, .activities_card5, .activities_card6 {
+        max-height: 200px;
+        margin-bottom: 30px;
+    }
+
+    .activities_card23, .activities_card56 {
+        height: auto;
+    }
+
+    /* Footer */
+
+    footer {
+        flex-direction: column;
+        margin: 0;
+        padding: 0 0 40px 0;
     }
     
-    header nav a {
-        width: 50%;
-        padding-bottom: 20px;
-        border-bottom: 2px solid #d9d9d9;
-        font-weight: 500;
-    }
-
-    header nav a:hover {
-        border-top: 0;
-        border-bottom: 2px solid #0065fc;
+    .footer_l, .footer_m, .footer_r {
+        width: 100%;
     }
 }

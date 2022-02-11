@@ -6,7 +6,8 @@
 }
 
 body {
-    margin: 0 10%;
+    max-width: 1440px;
+    margin: auto;
 }
 
     /* Header de la page - #HEADER */
@@ -16,9 +17,6 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1; /* Rendre le sticky au dessus des relative */
 }
 
 /* Logo de la page - .LOGO */
