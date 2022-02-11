@@ -75,6 +75,19 @@
         font-size: 0.9em;
     }
 
+    .filter_title {
+        width: 100%;
+    }
+
+    .filters h2 {
+        margin: 0;
+    }
+
+    .filters .filter {
+        padding: 0;
+        margin: 10px;
+    }
+
     /* Section Principale - Hébergements + Populaires */
 
     #results {
